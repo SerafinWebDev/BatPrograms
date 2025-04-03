@@ -1,0 +1,14 @@
+ 
+ 
+ 
+ 
+ manage-bde -status
+ 
+ manage-bde.exe -protectors -add -pw E:
+ 
+ manage-bde.exe -protectors -get E:
+ 
+ 
+ manage-bde.exe -on E:
+ 
+ manage-bde.exe -off E:
