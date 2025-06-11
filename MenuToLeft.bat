@@ -32,13 +32,13 @@ if errorlevel 1 (
             set /a count=0
             set "newline="
 
-            for %%B in (!hexdata!) do (
-                set /a count+=1
-                set "byte=%%B"
-                rem Change 15th byte if it is 03
-                if !count! EQU 15 if /i "!byte!"=="03" set "byte=00"
-                set "newline=!newline!!byte!,"
-            )
+           for %%B in (!hexdata!) do (
+    set /a count+=1
+    set "byte=%%B"
+    rem Change 13th byte if it is 03
+    if !count! EQU 13 if /i "!byte!"=="03" set "byte=00"
+    set "newline=!newline!!byte!,"
+)
 
             rem Remove trailing comma
             set "newline=!newline:~0,-1!"
